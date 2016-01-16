@@ -1,2 +1,2 @@
-# Space-Challenge
-Tento repozitář slouží k ukázce hry Space challenge, nepublikuji však zde záměrně všechny zdrojové kódy.
+# Space Challenge
+Tento repozitář slouží k ukázce hry Space Challenge a ke krátkému přehledu o tom, jak celá funguje.
