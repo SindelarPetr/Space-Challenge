@@ -36,7 +36,6 @@ namespace Space_challengeMG
             this.CreateButton(AppResource.Options, MLOptions); //Opens MenuList Options (MLOptions)
             this.CreateButton(AppResource.About, MLAbout); //Opens MenuList About (MLAbout) 
             #endregion
-
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime, MyState myState)

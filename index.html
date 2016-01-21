@@ -122,6 +122,7 @@
             <a id="zdrojové-kódy" class="anchor" href="#zdrojov%C3%A9-k%C3%B3dy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zdrojové kódy
         </h2>
 
+        <!-- Obecně o vývoji her -->
         <p>
             Na začátek seznámím laiky s tím, jak taková hra obecně vypadá "pod kapotou". V zásadě o nic složitého nejde, ve hře je každych x milisekund (např.: 16ms při 60FPS)
             zajištěno, aby všechny prvky měli možnost změnit svůj stav (posunutí, rotace, změna barvy, výstřel, ...), to se děje v metodě nazvané <em>Update</em>.
@@ -150,52 +151,113 @@
         </p>
 
         <code>
-               public void Update(GameTime gameTime, MyState myState)
-               {
-               #region Menu
-               if (ActiveMenu != null)
-               {
-               ActiveMenu.Update(gameTime, myState);
-               }
-               #endregion
-
-               #region Level
-               if (Level != null)
-               {
-               #region Level pause
-               if (myState.BackPressed && !myState.GamePadStateHandelt)
-               {
-               SetMenu(MenuType.Pause);
-               Level.Pause();
-               myState.GamePadStateHandelt = true;
-
-               }
-               #endregion
-
-               Level.Update(gameTime, myState, Content, GraphicsDevice);
-               }
-               #endregion
-
-               SoundEff.Update(gameTime);
-
-               CoinView.Update(gameTime);
-               }    
+            
+            <pre>public void Update(GameTime gameTime, MyState myState)
+{
+    #region Menu
+    if (ActiveMenu != null)
+    {
+        ActiveMenu.Update(gameTime, myState);
+    }
+    #endregion
+    
+    #region Level
+    if (Level != null)
+    {
+        #region Level pause
+        if (myState.BackPressed && !myState.GamePadStateHandelt)
+        {
+            SetMenu(MenuType.Pause);
+            Level.Pause();
+            myState.GamePadStateHandelt = true;
+        }
+        #endregion
+    
+    Level.Update(gameTime, myState, Content, GraphicsDevice);
+    }
+    #endregion
+    
+    SoundEff.Update(gameTime);
+    CoinView.Update(gameTime);
+}</pre>  
         </code>
 
+        <!-- Camera -->
+        <p>Za zmínku stojí i třída, která se stará o práci s kamerou (<em>Camera</em>). Ukáži zase jen metodu <em>Update</em>, celá je
+        zase k nalezení zde v repozitáři. Kamera samotná se skládá z různých pohybů. Je třeba zajistit, aby snímala hráče (<em>TargetViewMove</em>), pak také aby se "třásla"
+        (<em>ShakeScreen</em>), aby se mohla posouvat tím, že uživatel táhne po obrazovce (<em>DragViewMove</em>) - tato funkce nebude v publikované verzi zpřístupněna. A jako
+        poslední úkol dávám kameře posouvat se, tak aby uživatel viděl, kam střílí nebo letí (<em>ToSeeViewMove</em>). Kamera je tedy na zmíněné části "rozkouskována" a finální
+        pozice se vypočítá sečtením všech zmíněných vlastností.</p>
+        <code>
+        <pre>public void Update(GameTime gameTime, MyState myState)
+{
+    #region Counting parts of ViewMove
+    TargetViewMove.Update(gameTime);
+    DragViewMove.Update(gameTime, myState);
+    ShakeScreen.Update(gameTime);
+    ToSeeViewMove.Update(gameTime);
+    #endregion
+            
+    this.Zoomer.Update(gameTime, myState);
+            
+    #region Counting final ViewMove
+    ActualViewMove = TargetViewMove.FocusedPoint * Zoomer.FinalZoom + OriginViewMove + DragViewMove.ViewMove + ShakeScreen.ShakeViewMove * Zoomer.FinalZoom
+            + ToSeeViewMove.ViewMove * Zoomer.FinalZoom;
+    EaseViewMove(); 
+    #endregion
+}</pre>
+        </code>
 
-        <p><em>musí zde být MNOHO ukázek kódu</em></p>
-        <p><em>Třída table, camera, MenuMain, téměř 28 000 řádek kódu, základ je zase jednoduchost, nic neodfláknout - nevyplácí se to</em></p>
+        <!-- Ukázka třídy MLMain -->
+        <p>Zmínil jsem, že vytvoření menu je něco, co jsem se snažil co nejvíce zjednodušit. <a href="https://github.com/SindelarPetr/Space-Challenge/blob/gh-pages/Code%20examples/MLMain.cs">Zde</a> 
+        je ukázka třídy, která reprezentuje úplně první okno, které se otevře po spuštění. Níže je uvedena část, kde probíhá vytvoření. Neděje se nic složitého. V zásadě 
+        se jen vytvoří 3 další seznamy tlačítek a 3 tlačítka, kterými se do nich po kliknutí dosnanem.</p>
 
+        <code>
+            <pre>public MLMain(ContentManager content, MenuController menu, MenuList parent)
+            : base(content, menu, menu.Table.Resolution / 2f, parent)
+        {
+            #region MenuLists
+            #region MenuLists creation
+            this.MLPlay = new MLPlay(content, menu, this);
+            this.MLOptions = new MLOptions(content, menu, this);
+            this.MLAbout = new MLAbout(content, menu, this);
+            #endregion
+            
+            #region MenuLists addition
+            this.Kids.Add(MLPlay);
+            this.Kids.Add(MLOptions);
+            this.Kids.Add(MLAbout);
+            #endregion 
+            #endregion
+            
+            #region Items creation
+            //3 buttons -> only moving menu forward
+            this.CreateButton(AppResource.Play, MLPlay); //Opens MenuList Play (MLPlay)
+            this.CreateButton(AppResource.Options, MLOptions); //Opens MenuList Options (MLOptions)
+            this.CreateButton(AppResource.About, MLAbout); //Opens MenuList About (MLAbout) 
+            #endregion
+        }</pre>
+        </code>
 
+        <p>Tento projekt je celkem rozsáhlý a uvádím záměrně pouze malou část ze všech zdrojových kódů. Celý projekt má ke dni 21.1.2016 skoro 28 000 řádek kódu, do kterého
+        jsem se snažil vložit to nejlepší ze sebe sama.</p>
 
         <h2>
             <a id="do-budoucna" class="anchor" href="#do-budoucna" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do budoucna
         </h2>
 
-        <p><em>Co bude zlepšeno. Co bude nového (více levelů, více nepřátel, ukládání skóre na server - řazení podle nejbohatšího hráče)</em></p>
+        <p><em>Jsem si jist, že stále je co zlepšovat a vždy bude. Pokud se budeme bavit o efektivitě použitých algoritmů, tak se snažím použít jen to nejlepší a nic neošidit 
+            a to už jen proto, že, když u něčeho trávím čas, chci, abych se poté mohl ohlédnout a říct si, že ten čas jsem zbytečně nevyplýtval.</em></p>
+
+        <p>Samozřejmě počítám s vytvořením více levelů, vytvořením nových typů nepřátel. Počítám i s vytvořením určitých bonusů, které způsobí, že budete na nějakou dobu nesmrtelní
+        nebo budete ničit vše do čeho narazíte nebo budete střílet 2x rychleji/s větším poškozením/s větší plochou poškození.</p>
+
+        <p>Rozhodně jsem pro to, aby člověk měl možnost porovnat svůj výkon s ostatními lidmi ze světa. Takže zavedení ukládání skóre na server. Zde bych jako skóre považoval 
+        aktuální množství peněz získaných při hraní a možnost vidět sám sebe v žebříčku nejbohatších lidí. </p>
 
         <footer class="site-footer">
-            <span class="site-footer-owner"><a href="https://github.com/SindelarPetr/Space-Challenge">Space Challenge</a> is maintained by <a href="https://github.com/SindelarPetr">SindelarPetr</a>.</span>
+            <span class="site-footer-owner"><a href="https://github.com/SindelarPetr/Space-Challenge">Space Challenge</a> is maintained by <a href="https://github.com/SindelarPetr">Petr Šindelář (petr.sinde@gmail.com)</a>.</span>
 
             <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
         </footer>
