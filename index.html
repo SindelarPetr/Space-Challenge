@@ -120,8 +120,30 @@
             <a id="zdrojové-kódy" class="anchor" href="#zdrojov%C3%A9-k%C3%B3dy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zdrojové kódy
         </h2>
 
+        <p>Na začátek seznámím laiky s tím, jak taková hra obecně vypadá "pod kapotou". V zásadě o nic složitého nejde, ve hře je každych x milisekund (např.: 16ms při 60FPS)
+        zajištěno, aby všechny prvky měli možnost změnit svůj stav (posunutí, rotace, změna barvy, výstřel, ...), to se děje v metodě nazvané <em>Update</em>.
+        Poté je třeba všechny prvky vykreslit pomocí metody <em>Draw</em>, poté se spouští znovu <em>Update</em> a hra takto stále pokračuje. Na začátku k vytvoření 
+        všech prvotních prvků, jako bývá nejčastěji menu, se volá metoda <em>Load</em>.</p>
+
+        <p>Co se týče zdrojových kódů jako takových, zakládal jsem si na podobných hodnotách jako při návrhu hry. Myslím tím především jednoduchost, preciznost,
+        efektivitu a přehlednost. Přehlednost samotná je velice důležitá, visual studio podporuje tzv. regiony, to nám umožní "sbalit" část kódu a pojmenovat, takže
+        poté nemusíme řešit, co přesně se uvnitř regionu děje - máme to pojmenované. Samozřejmě tam, kde je potřeba dovysvětlit funkčnost jsem používal poznámky. Třídy
+        tedy často budou mít podobný vzhled, pokud nebudu mít otevřené regiony, jako na obrázku níže.</p>
+
+        <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/Code/RegionsExample.png" />
+
+        <p>Samotná třída <em>Table</em> je páteřní třídou celého programu, která se stará o propojení menu a hraní levelů. V 
+        <a href="https://github.com/SindelarPetr/Space-Challenge/tree/gh-pages/Code%20examples">ukázkách kódů</a> si ji můžete celou prohlédnout.</p>
+
+        <p>Rád bych zde vypíchl z této třídy část, kde dochází k výše zmíněnému updatu. Ačkoliv je tato metoda velice důležitá a používaná po celou dobu
+        běhu aplikace a zajišťuje vlastně celý chod hry, je poměrně krátká. A tak to má být, v ideálním případě se snažím, aby třídy a metody byly co nejkratšího
+        rozsahu, práce se poté dělí do dalších částí programu, což umožňuje snadné ladění a poskytuje příjemnou přehlednost.</p>
+
+
+
+
         <p><em>musí zde být MNOHO ukázek kódu</em></p>
-        <p><em>Třída table, camera, MenuMain, téměř 28 000 řádek kódu</em></p>
+        <p><em>Třída table, camera, MenuMain, téměř 28 000 řádek kódu, základ je zase jednoduchost, nic neodfláknout - nevyplácí se to</em></p>
 
 
 
