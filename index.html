@@ -21,16 +21,20 @@
             <a id="space-challenge" class="anchor" href="#space-challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Space Challenge
         </h1>
 
-        <img style="width:20%; height:20%" src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/Icons/SCAppIcon.png">
+        <img style="width:20%; height:20%" src="Pictures/Icons/SCAppIcon.png" />
 
         <h2>
             <a id="o-hře" class="anchor" href="#o-h%C5%99e" aria-hidden="true"><span class="octicon octicon-link"></span></a>O hře
         </h2>
 
-        <p>Také máš plné zuby her, kde se střílí, střílí a zase jen střílí? Ne? Tak to jsi na správné cestě. V mé hře musíš zničit takřka celé galaxie plné nebezpečných nepřátel! Ve 3 galaxiích na celkem 60 místech tě budou čekat hordy lačnící po tvé smrti, ale to je něco, co jim rozhodně nesmíš dopřát, a proto je sundej jako první. Budeš tak moci sesbírat všechny části portálu roztroušené po mapě a dostat se tak do vyšších úrovní. Za sbírání těchto prvků dostaneš automaticky cash (prostě prachy jestli tomu nerozumíš), za který si vylepšíš raketu a budeš moci zničit víc a více nepřátel, případně si pořídíš lepší skin na raketu. Tvoje touha po krvi se pravděpodobně dostane do hrůzných dimenzí, takže sem se snažil, abys ji mohl všechnu pěkně ventilovat.</p>
+        <p>Také máš plné zuby her, kde se střílí, střílí a zase jen střílí? Ne? Tak to jsi na správné cestě. V mé hře musíš zničit takřka celé galaxie plné 
+        nebezpečných nepřátel! Ve 3 galaxiích na celkem 60 místech tě budou čekat hordy lačnící po tvé smrti, ale to je něco, co jim rozhodně nesmíš dopřát, 
+        a proto je sundej jako první. Budeš tak moci sesbírat všechny části portálu roztroušené po mapě a dostat se tak do vyšších úrovní. Za sbírání těchto 
+        prvků dostaneš automaticky peníze, za který si vylepšíš raketu a budeš moci zničit víc a více nepřátel, případně si pořídíš lepší skin. Tvoje touha 
+        po krvi se pravděpodobně dostane do hrůzných dimenzí, takže sem se snažil, aby si ji mohl všechnu pěkně ventilovat.</p>
 
         <blockquote>
-            <p>Pozn.: přestože se Space Challenge zdá býti brutální, je vytvořen s citem a láskou.</p>
+            <p>Pozn.: Přestože se Space Challenge zdá býti brutální, je vytvořen s citem a láskou.</p>
         </blockquote>
 
         <p style="text-align:center"><a href=""><img style="width:30%; height:30%" src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/Stores/winphone-store-friendly.png" /></a> (Již brzy)</p>
@@ -41,8 +45,6 @@
         <h2>
             <a id="ukázka-hry" class="anchor" href="#uk%C3%A1zka-hry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ukázka hry
         </h2>
-
-        <p><em>Je třeba, aby tato sekce obsahovala mnoho obrázků ze hry.</em></p>
 
         <p><img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen10.png" alt=""></p>
 
@@ -90,14 +92,14 @@
 
         <p>
             V menu jsem se na grafické efekty tolik nesoustředil. Chtěl jsem docílit hlavně toho, aby člověk, který o této hře v životě neslyšel, menu
-            "pochopil" již od prvního okamžiku. Vymyslel sem tedy koncept seznamů tlačítek, který je jednou z pro uživatele nejjednodušších možných
+            "pochopil" již od prvního okamžiku. Vymyslel jsem tedy koncept seznamů tlačítek, který je jednou z pro uživatele nejjednodušších možných
             typů menu. Zároveň je velice jednoduché vytvořit výsledou strukturu menu (zajištění, aby tlačítka odkazovala na další seznamy tlačítek).
         </p>
 
         <p><img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Menu/SCChooseAGalaxy.png" alt=""></p>
 
         <p>
-            Na obrázku výše je část menu, kde si uživatel vybírá, který svět chce hrát, pokud jeden svět nedokončil, nemůže se tak dostat do dalšího.
+            Na obrázku výše je část menu, kde si uživatel vybírá, který svět chce hrát. Pokud jeden svět nedokončil, nemůže se tak dostat do dalšího.
             Pozadí tlačítek nebylo nějak zvlášť využito, a tak jsem ho použil jako ProgressBar (ukazatel postupu) a ukazuje, jakou část již hráč prošel.
         </p>
 
@@ -125,16 +127,16 @@
         <!-- Obecně o vývoji her -->
         <p>
             Na začátek seznámím laiky s tím, jak taková hra obecně vypadá "pod kapotou". V zásadě o nic složitého nejde, ve hře je každych x milisekund (např.: 16ms při 60FPS)
-            zajištěno, aby všechny prvky měli možnost změnit svůj stav (posunutí, rotace, změna barvy, výstřel, ...), to se děje v metodě nazvané <em>Update</em>.
+            zajištěno, aby všechny prvky měly možnost změnit svůj stav (posunutí, rotace, změna barvy, výstřel, ...), to se děje v metodě nazvané <em>Update</em>.
             Poté je třeba všechny prvky vykreslit pomocí metody <em>Draw</em>, poté se spouští znovu <em>Update</em> a hra takto stále pokračuje. Na začátku k vytvoření
             všech prvotních prvků, jako bývá nejčastěji menu, se volá metoda <em>Load</em>.
         </p>
 
         <p>
             Co se týče zdrojových kódů jako takových, zakládal jsem si na podobných hodnotách jako při návrhu hry. Myslím tím především jednoduchost, preciznost,
-            efektivitu a přehlednost. Přehlednost samotná je velice důležitá, visual studio podporuje tzv. regiony, to nám umožní "sbalit" část kódu a pojmenovat, takže
-            poté nemusíme řešit, co přesně se uvnitř regionu děje - máme to pojmenované. Samozřejmě tam, kde je potřeba dovysvětlit funkčnost jsem používal poznámky. Třídy
-            tedy často budou mít podobný vzhled, pokud nebudu mít otevřené regiony, jako na obrázku níže.
+            efektivitu a přehlednost. Přehlednost samotná je velice důležitá, Visual Studio (prostředí na vývoj) podporuje tzv. regiony, to nám umožní "sbalit" část kódu 
+            a pojmenovat, takže poté nemusíme, při zběžném procházaní kódu, řešit, co přesně se uvnitř regionu děje - máme to pojmenované. Samozřejmě tam, kde je potřeba 
+            dovysvětlit funkčnost jsem používal poznámky. Třídy tedy často budou mít podobný vzhled, pokud nebudu mít otevřené regiony, jako na obrázku níže.
         </p>
 
         <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/Code/RegionsExample.png" />
@@ -183,11 +185,14 @@
         </code>
 
         <!-- Camera -->
-        <p>Za zmínku stojí i třída, která se stará o práci s kamerou (<em>Camera</em>). Ukáži zase jen metodu <em>Update</em>, celá je
-        zase k nalezení zde v repozitáři. Kamera samotná se skládá z různých pohybů. Je třeba zajistit, aby snímala hráče (<em>TargetViewMove</em>), pak také aby se "třásla"
-        (<em>ShakeScreen</em>), aby se mohla posouvat tím, že uživatel táhne po obrazovce (<em>DragViewMove</em>) - tato funkce nebude v publikované verzi zpřístupněna. A jako
-        poslední úkol dávám kameře posouvat se, tak aby uživatel viděl, kam střílí nebo letí (<em>ToSeeViewMove</em>). Kamera je tedy na zmíněné části "rozkouskována" a finální
-        pozice se vypočítá sečtením všech zmíněných vlastností.</p>
+        <p>
+            Za zmínku stojí i třída, která se stará o práci s kamerou (<em>Camera</em>). Ukáži zase jen metodu <em>Update</em>, celá je
+            k nalezení <a href="https://github.com/SindelarPetr/Space-Challenge/tree/gh-pages/Code%20examples/Camera.cs">zde</a> v repozitáři. Kamera samotná se skládá 
+            z různých pohybů. Je třeba zajistit, aby snímala hráče (<em>TargetViewMove</em>), pak také aby se "třásla" (<em>ShakeScreen</em>), aby se mohla posouvat tím, 
+            že uživatel táhne po obrazovce (<em>DragViewMove</em>) - tato funkce nebude v publikované verzi zpřístupněna. A jako poslední úkol dávám kameře posouvat se, 
+            tak aby uživatel viděl, kam střílí nebo letí (<em>ToSeeViewMove</em>). Kamera je tedy na zmíněné části "rozkouskována" a finální pozice se vypočítá sečtením 
+            všech částí.
+        </p>
         <code>
         <pre>public void Update(GameTime gameTime, MyState myState)
 {
@@ -247,11 +252,11 @@
             <a id="do-budoucna" class="anchor" href="#do-budoucna" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do budoucna
         </h2>
 
-        <p><em>Jsem si jist, že stále je co zlepšovat a vždy bude. Pokud se budeme bavit o efektivitě použitých algoritmů, tak se snažím použít jen to nejlepší a nic neošidit 
+        <p><em>Jsem si jist, že stále je co zlepšovat a vždy bude. Pokud se budeme bavit o efektivitě použitých algoritmů, tak se snažím použít jen to nejlepší, nic neošidit 
             a to už jen proto, že, když u něčeho trávím čas, chci, abych se poté mohl ohlédnout a říct si, že ten čas jsem zbytečně nevyplýtval.</em></p>
 
-        <p>Samozřejmě počítám s vytvořením více levelů, vytvořením nových typů nepřátel. Počítám i s vytvořením určitých bonusů, které způsobí, že budete na nějakou dobu nesmrtelní
-        nebo budete ničit vše do čeho narazíte nebo budete střílet 2x rychleji/s větším poškozením/s větší plochou poškození.</p>
+        <p>Samozřejmě počítám s vytvořením více levelů, vytvořením nových typů nepřátel. Počítám i s vytvořením určitých bonusů, které způsobí, že budete na nějakou dobu 
+        nesmrtelní nebo budete ničit vše do čeho narazíte nebo budete střílet 2x rychleji/s větším poškozením/s větší plochou poškození.</p>
 
         <p>Rozhodně jsem pro to, aby člověk měl možnost porovnat svůj výkon s ostatními lidmi ze světa. Takže zavedení ukládání skóre na server. Zde bych jako skóre považoval 
         aktuální množství peněz získaných při hraní a možnost vidět sám sebe v žebříčku nejbohatších lidí. </p>
