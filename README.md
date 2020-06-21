@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/Icons/SCAppIcon.png" alt="Bootstrap logo" width="200" height="200">
+    <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/Icons/SCAppIcon.png" alt="Space challenge logo" width="200" height="200">
 </p>
 
 <h1 align="center">Space Challenge</h1>
@@ -16,9 +16,9 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen3.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen8.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen5.png" alt="Bootstrap logo">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen3.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen8.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen5.png" alt="Space challenge screenshot">
 </p>
 
 ## Game Play
@@ -40,19 +40,19 @@ The idea is very simple. On each map you have to **collect all the orbits** and 
 
 ## More Screenshots
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Menu/SCMain.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen10.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen11.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen1.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen12.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen13.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen14.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen15.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen16.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen17.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen18.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen7.png" alt="Bootstrap logo">
-  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen9.png" alt="Bootstrap logo">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Menu/SCMain.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen10.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen11.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen1.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen12.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen13.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen14.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen15.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen16.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen17.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen18.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen7.png" alt="Space challenge screenshot">
+  <img src="https://raw.githubusercontent.com/SindelarPetr/Space-Challenge/gh-pages/Pictures/SCScreenshots/Game/gameScreen9.png" alt="Space challenge screenshot">
 </p>
 
 ## About me
