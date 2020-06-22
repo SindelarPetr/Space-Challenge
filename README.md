@@ -22,7 +22,7 @@
 </p>
 
 ## Game Play
-The idea is very simple. On each map you have to **collect all the orbits** and **not get killed**. For the orbits you are then able to improve your ship to be a better **killing beast**.
+The idea is very simple. On each map, you have to **collect all the orbits** and **not get killed**. For the orbits, you are then able to improve your ship to be a better **killing beast**.
 
 ## Features
 * 🗺️ 30 different maps
@@ -56,6 +56,6 @@ The idea is very simple. On each map you have to **collect all the orbits** and 
 </p>
 
 ## About me
-I am a .NET Lead Senior Developer I have worked for couple of major Czech software companies. Programming is my passion since I was 13. This project was at that time one of my first large projects ever made (at the age of 17).
+In short, I have been working as a Lead .NET Developer for several major Czech software companies. Programming in .NET is my passion since I was 13. After high school, I got a degree from computer science at the top technical university in the Czech Republic. This project was at that time one of my first large projects ever made (at the age of 17)
 
 I will be happy to hear from you on [LinkedIn](https://www.linkedin.com/in/petr-sindelar) [Facebook](https://www.facebook.com/petr.sindelar) or [Instagram](https://www.instagram.com/petr_sindelar_official/)
